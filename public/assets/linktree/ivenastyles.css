@@ -1,0 +1,61 @@
+html {
+    height: 100%;
+  }
+  body {
+    font-family: 'IBM PlexS Sans', sans-serif;
+    font: #E6E1D5;
+    background: rgb(204, 201, 195);
+    width: 100%;
+    overflow-x: hidden;
+    color:#887A69;
+  }
+  
+  .ivena-logo {
+    border-radius: 50%;
+    width: 96px;
+    height: 96px;
+    display: block;
+    object-fit: contain;
+    margin: auto;
+    margin-top: 52px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 20px;
+
+  }
+  
+  a {
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+    color: white;
+  }
+  
+  .ivena-links {
+    background-color: rgb(172, 160, 143);
+    width: 650px;
+    cursor: pointer;
+    margin: auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 2px solid rgb(172, 160, 143);
+    border-radius: 2px;
+    position: relative;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+  }
+  
+  .ivena-links:hover {
+    background-color: transparent;
+  }
+  
+  .ivena-links-container {
+    margin-top: 20px;
+  }
