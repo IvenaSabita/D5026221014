@@ -471,6 +471,10 @@
                                 class="dark:text-white">JavaScript 2</a></div>
                                 <div class="text-lg leading-10 font-light"><a href="/validasi1"
                                 class="dark:text-white">Form Validation</a></div>
+                                <div class="text-lg leading-10 font-light"><a href="/news"
+                                class="dark:text-white">News</a></div>
+                                <div class="text-lg leading-10 font-light"><a href="/style"
+                                class="dark:text-white">Style with CSS</a></div>
 
                             </div>
                         </div>
