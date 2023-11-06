@@ -453,8 +453,6 @@
                                <br>
                                <?php echo date ("D d M Y");?>
                                <br>
-                               Intro HTML
-                               <br>
                                <div class="text-lg leading-10 font-light"><a href="/introHTML"
                                 class="dark:text-white">Intro HTML </a></div>
                                <div class="text-lg leading-10 font-light"><a href="/news"
