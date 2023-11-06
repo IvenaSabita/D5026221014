@@ -7,6 +7,10 @@
 </head>
 <body>
 <h1>Halo, Selamat datang Wirs</h1>
-halo
+<p>
+    Nama:{{$nama}}
+    Alamat:{{$alamat}}
+    Umur:{{$umur}}
+</p>
 </body>
 </html>

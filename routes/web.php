@@ -74,3 +74,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('perkalian','App\Http\Controllers\DosenController@index');
+
+Route::get('showBlog','App\Http\Controllers\DosenController@showBlog');
