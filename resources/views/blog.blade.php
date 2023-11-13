@@ -7,10 +7,13 @@
 </head>
 <body>
 <h1>Halo, Selamat datang Wirs</h1>
-<p>
+{{-- <p>
     Nama:{{$nama}}
     Alamat:{{$alamat}}
     Umur:{{$umur}}
-</p>
+</p> --}}
+
+<a href="/pegawai/{{date('D M Y')}}">Klik di Sini</a>
+
 </body>
 </html>

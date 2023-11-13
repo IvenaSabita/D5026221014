@@ -21,7 +21,7 @@ Route::get('halo', function () {
 	return "<h1>Halo, Selamat datang</h1>";
 });
 
-Route::get('/blog', function () {
+Route::get('/blog2', function () {
     return view('blog');
 });
 
@@ -77,3 +77,19 @@ Route::get('/', function () {
 Route::get('perkalian','App\Http\Controllers\DosenController@index');
 
 Route::get('showBlog','App\Http\Controllers\DosenController@showBlog');
+
+Route::get('/pegawai/{nama}', 'App\Http\Controllers\DosenController@shownama');
+
+Route::get('/formulir', 'App\Http\Controllers\DosenController@formulir');
+Route::post('/formulir/proses', 'App\Http\Controllers\DosenController@proses');
+
+Route::get('/blog', 'App\Http\Controllers\BlogController@home');
+Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
+Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');
+
+
+
+
+
+
+
