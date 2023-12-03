@@ -44,6 +44,6 @@
             </tr>
         @endforeach
     </table>
-	{{ $pegawai-> Links()}}
+	{{ $pegawai-> links()}}
 
 @endsection
