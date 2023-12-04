@@ -24,18 +24,36 @@ class PegawaiController extends Controller
     }
 
     public function store(Request $request){
+        // Validasi request
+        $request->validate([
+            'nama' => 'required', // Pastikan 'nama' tidak kosong
+            'jabatan' => 'required',
+            'umur' => 'required|numeric',
+            'alamat' => 'required',
+        ]);
+
         // insert data ke table pegawai
-        DB::table('pegawai')-> insert([
+        DB::table('pegawai')->insert([
             'pegawai_nama' => $request->nama,
             'pegawai_jabatan' => $request->jabatan,
             'pegawai_umur' => $request->umur,
             'pegawai_alamat' => $request->alamat
         ]);
-        // alihkan halaman ke halaman pegawai
-        return redirect('/pegawai');
-        // kenapa tidak return view index
-        // redirect melempar ke suatu url route pegawai, maka akan query all record
     }
+
+    // public function store(Request $request){
+    //     // insert data ke table pegawai
+    //     DB::table('pegawai')-> insert([
+    //         'pegawai_nama' => $request->nama,
+    //         'pegawai_jabatan' => $request->jabatan,
+    //         'pegawai_umur' => $request->umur,
+    //         'pegawai_alamat' => $request->alamat
+    //     ]);
+    //     // alihkan halaman ke halaman pegawai
+    //     return redirect('/pegawai');
+    //     // kenapa tidak return view index
+    //     // redirect melempar ke suatu url route pegawai, maka akan query all record
+    // }
 
     public function edit($id){
         // mengambil data pegawai berdasarkan id yang dipilih
