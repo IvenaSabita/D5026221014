@@ -96,7 +96,13 @@ Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus')
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
-
+Route::get('/sepeda','App\Http\Controllers\SepedaController@indexSepeda');
+Route::get('/sepeda/tambah','App\Http\Controllers\SepedaController@tambahData');
+Route::post('/sepeda/storeData','App\Http\Controllers\SepedaController@storeData');
+Route::get('/sepeda/edit/{id}','App\Http\Controllers\SepedaController@edit');
+Route::post('/sepeda/update','App\Http\Controllers\SepedaController@update');
+Route::get('/sepeda/hapus/{id}','App\Http\Controllers\SepedaController@hapus');
+Route::get('/sepeda/cari','App\Http\Controllers\SepedaController@cari');
 
 
 
