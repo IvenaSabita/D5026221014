@@ -20,7 +20,7 @@
 @section('konten')
 
 	<table class="table table-striped table-hover ">
-		<tr>
+		<tr class="bg-info">
 			<th class="text-center">Kode Sepeda</th>
 			<th class="text-center">Merk Sepeda</th>
 			<th class="text-center">Stock Sepeda</th>

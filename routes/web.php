@@ -99,10 +99,11 @@ Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 Route::get('/sepeda','App\Http\Controllers\SepedaController@indexSepeda');
 Route::get('/sepeda/tambah','App\Http\Controllers\SepedaController@tambahData');
 Route::post('/sepeda/storeData','App\Http\Controllers\SepedaController@storeData');
-Route::get('/sepeda/edit/{id}','App\Http\Controllers\SepedaController@edit');
+Route::get('/sepeda/edit/{kode}','App\Http\Controllers\SepedaController@edit');
 Route::post('/sepeda/update','App\Http\Controllers\SepedaController@update');
-Route::get('/sepeda/hapus/{id}','App\Http\Controllers\SepedaController@hapus');
+Route::get('/sepeda/hapus/{kode}','App\Http\Controllers\SepedaController@hapus');
 Route::get('/sepeda/cari','App\Http\Controllers\SepedaController@cari');
+Route::get('/sepeda/view/{kode}','App\Http\Controllers\SepedaController@view');
 
 Route::get('/dbnilai','App\Http\Controllers\NilaiController@indexNilai');
 Route::get('/dbnilai/tambah','App\Http\Controllers\NilaiController@tambahData');

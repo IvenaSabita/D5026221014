@@ -25,12 +25,12 @@ class PegawaiController extends Controller
 
     public function store(Request $request){
         // Validasi request
-        $request->validate([
-            'nama' => 'required', // Pastikan 'nama' tidak kosong
-            'jabatan' => 'required',
-            'umur' => 'required|numeric',
-            'alamat' => 'required',
-        ]);
+        // $request->validate([
+        //     'nama' => 'required', // Pastikan 'nama' tidak kosong
+        //     'jabatan' => 'required',
+        //     'umur' => 'required|numeric',
+        //     'alamat' => 'required',
+        // ]);
 
         // insert data ke table pegawai
         DB::table('pegawai')->insert([
@@ -39,6 +39,7 @@ class PegawaiController extends Controller
             'pegawai_umur' => $request->umur,
             'pegawai_alamat' => $request->alamat
         ]);
+        return redirect('/pegawai');
     }
 
     // public function store(Request $request){

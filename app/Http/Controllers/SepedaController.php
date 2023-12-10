@@ -53,12 +53,12 @@ class SepedaController extends Controller{
 
 		$cari = $request->cari;
 
-		$lipstick = DB::table('sepeda')
+		$sepeda = DB::table('sepeda')
 		->where('merksepeda','like',"%".$cari."%")
 		->paginate();
 
     		// mengirim data pegawai ke view index
-		return view('indexSepeda',['sepeda' => $lipstick]);
+		return view('indexSepeda',['sepeda' => $sepeda]);
 
 	}
 
@@ -67,6 +67,15 @@ class SepedaController extends Controller{
         DB::table('sepeda')->where('kodesepedamotor',$kode)->delete();
 
         return redirect('/sepeda');
+    }
+
+    public function view($kode){
+        // mengambil data dari table pegawai sesuai id
+        $sepeda = DB::table('sepeda')
+        ->where('kodesepedamotor', $kode)
+        ->get();
+
+        return view('viewSepeda', ['sepeda' => $sepeda]);
     }
 
 }

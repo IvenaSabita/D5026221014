@@ -16,11 +16,11 @@
 	@foreach($sepeda as $l)
 	<form action="/sepeda/update" method="post">
 		{{ csrf_field() }}
-        <input type="hidden" name="id" value="{{ $l->kodesepedamotor}}"> <br/>
+        <input type="hidden" name="kode" value="{{ $l->kodesepedamotor}}"> <br/>
         <div class = "form-group row">
             <label for = "merk" class = "col-sm-2 control-label">Nama Merk</label>
             <div class = "col-sm-8">
-               <input  name="merk" type = "text" required = "required" class = "form-control" id = "merk" value="{{ $l->merksepeda }}" readonly>
+               <input  name="merk" type ="text" required = "required" class = "form-control" id = "merk" value="{{ $l->merksepeda }}" readonly>
             </div>
         </div>
 		<div class = "form-group row">
