@@ -12,17 +12,17 @@
 <body>
 
     <div class="container">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
             <!-- Brand -->
             <a class="navbar-brand" href="#">5026221014 - Ivena Sabita Wiranda</a>
 
             <!-- Links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link 1</a>
+                    <a class="nav-link" href="#">Pegawai </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link 2</a>
+                    <a class="nav-link" href="#"> Sepeda </a>
                 </li>
 
                 <!-- Dropdown -->
@@ -32,8 +32,8 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="/pegawai">Pegawai</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
+                        <a class="dropdown-item" href="/sepeda">Sepeda</a>
+                        <a class="dropdown-item" href="/dbnilai">Nilai Mahasiswa</a>
                     </div>
                 </li>
             </ul>
@@ -57,7 +57,7 @@
         <br />
         <hr />
         <footer>
-            <p>&copy; <a href="https://www.malasngoding.com">www.malasngoding.com</a>. 2018 - 2019</p>
+            <p>&copy; <a href="https://www.malasngoding.com">www.malasngoding.com</a>2023</p>
         </footer>
     </div>
 

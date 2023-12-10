@@ -19,23 +19,23 @@
 
 @section('konten')
 
-	<table class="table table-striped table-hover">
+	<table class="table table-striped table-hover ">
 		<tr>
-			<th>Kode Sepeda</th>
-			<th>Merk Sepeda</th>
-			<th>Stock Sepeda</th>
-			<th>Tersedia</th>
-            <th>Opsi</th>
+			<th class="text-center">Kode Sepeda</th>
+			<th class="text-center">Merk Sepeda</th>
+			<th class="text-center">Stock Sepeda</th>
+			<th class="text-center">Tersedia</th>
+            <th class="text-center">Opsi</th>
 		</tr>
 		@foreach($sepeda as $l)
 		<tr>
-            <td>{{ $l->kodesepedamotor }}</td>
-            <td>{{ $l->merksepeda }}</td>
-            <td> {{ $l->stocksepeda }}</td>
-            <div class="text-center">
+            <td class="text-center">{{ $l->kodesepedamotor }}</td>
+            <td class="text-center">{{ $l->merksepeda }}</td>
+            <td class="text-center"> {{ $l->stocksepeda }}</td>
+              <div class="text-center">
                 <td
                 @if ($l->tersedia =="Y" ){
-                    class = "bg-success text-white text-center"
+                    class = "bg-success text-white text-center "
                 }
                 @else{
                     class = "bg-danger text-white text-center" value = "Tidak Ada"
@@ -44,10 +44,12 @@
                 >{{ $l->tersedia }}
                 </td>
             </div>
-            <td>
+            <td class="text-center">
 				<a href="/sepeda/edit/{{ $l->kodesepedamotor }}" class="btn btn-warning">Edit</a>
 				|
 				<a href="/sepeda/hapus/{{ $l->kodesepedamotor }}" class="btn btn-danger">Hapus</a>
+                |
+                <a href="/sepeda/view/{{ $l->kodesepedamotor }}" class="btn btn-success">View</a>
 			</td>
 		</tr>
 		@endforeach

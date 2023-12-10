@@ -104,5 +104,7 @@ Route::post('/sepeda/update','App\Http\Controllers\SepedaController@update');
 Route::get('/sepeda/hapus/{id}','App\Http\Controllers\SepedaController@hapus');
 Route::get('/sepeda/cari','App\Http\Controllers\SepedaController@cari');
 
-
+Route::get('/dbnilai','App\Http\Controllers\NilaiController@indexNilai');
+Route::get('/dbnilai/tambah','App\Http\Controllers\NilaiController@tambahData');
+Route::post('/dbnilai/storeData','App\Http\Controllers\NilaiController@storeData');
 
