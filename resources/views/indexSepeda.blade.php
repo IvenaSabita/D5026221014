@@ -2,7 +2,7 @@
 @section('title','Database Sepeda')
 @section('judul_halaman')
 <h2>www.malasngoding.com</h2>
-<h3>Data Sepda</h3>
+<h3>Data Sepeda</h3>
 
 <p>Cari Data Sepeda :</p>
 	<form  action="/sepeda/cari" method="GET">
