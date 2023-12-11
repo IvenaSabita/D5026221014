@@ -8,29 +8,27 @@ use Illuminate\Support\Facades\DB;
 class KaryawanController extends Controller
 {
     public function index()
+    // method untuk menampilkan view record seluruh karyawan
     {
-    	// mengambil data dari table karyawan
-    	// $karyawan = DB::table('karyawan')->get();
 
         $karyawan = DB::table('karyawan')->get();
 
-    	// mengirim data karyawan ke view index
     	return view('indexKaryawan',['karyawan' => $karyawan]);
 
     }
 
-    // method untuk menampilkan view form tambah karyawan
+    // method untuk menampilkan form tambah karyawan
 	public function tambah()
 	{
 
-		// memanggil view tambah
 		return view('tambahKaryawan');
 
 	}
 
-	// method untuk insert data ke table karyawan
+	// method untuk menambahkan data karyawan baru ke table karyawan
 	public function store(Request $request)
 	{
+        //valiadasi input
         $request->validate([
             'kodepegawai' =>
                 'required',
@@ -40,27 +38,23 @@ class KaryawanController extends Controller
             'departemen' => 'required|max:20',
         ]);
 
-        // insert data ke table karyawan
+        // insert data
 		DB::table('karyawan')->insert([
 			'kodepegawai' => $request->kodepegawai,
 			'namalengkap' => $request->namalengkap,
 			'divisi' => $request->divisi,
 			'departemen' => $request->departemen
 		]);
-		// alihkan halaman ke halaman karyawan
-		return redirect('/karyawan')->with('success', 'Karyawan berhasil ditambahkan');
+		return redirect('/karyawan')->with('success', 'Data Karyawan telah diperbarui');
 
 	}
 
-	// method untuk hapus data karyawan
+	// method untuk hapus data karyawan berdasarkan Kode
 	public function hapus($kodepegawai)
 	{
-		// menghapus data karyawan berdasarkan id yang dipilih
 		DB::table('karyawan')->where('kodepegawai',$kodepegawai)->delete();
 
-		// alihkan halaman ke halaman karyawan
 		return redirect('/karyawan');
-        //tdk return view karena redirect lebih singkat: melempar ke suatu url route karyawan, maka akan query all record
 	}
 
 }

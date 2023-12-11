@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class = "form-group row">
-            <label for = "namalengkap" class = "col-sm-2 control-label">Nama Lengkap</label>
+            <label for = "namalengkap" class = "col-sm-2 control-label">Nama Lengkap Karyawan</label>
             <div class = "col-sm-10">
                 <input name="namalengkap" type = "text" class = "form-control" id = "namalengkap"
                     placeholder = "Masukkan Nama Lengkap karyawan">
@@ -29,14 +29,14 @@
             <label for = "divisi" class = "col-sm-2 control-label">Divisi</label>
             <div class = "col-sm-10">
                 <input name="divisi" type = "text" class = "form-control" id = "divisi"
-                    placeholder = "Masukkan Divisi karyawan">
+                    placeholder = "Masukkan Keterangan Divisi">
             </div>
         </div>
         <div class = "form-group row">
-            <label for = "departemen" class = "col-sm-2 control-label">departemen</label>
+            <label for = "departemen" class = "col-sm-2 control-label">Departemen</label>
             <div class = "col-sm-10">
                 <input name="departemen" type = "text" class = "form-control" id = "departemen"
-                    placeholder = "Masukkan Departemen karyawan">
+                    placeholder = "Masukkan Keterangan Departemen">
             </div>
         </div>
         <input type="submit" value="Simpan" class="btn btn-primary">

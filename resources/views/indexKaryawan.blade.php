@@ -5,9 +5,6 @@
 
     <h2>www.malasngoding.com</h2>
     <h3>Data Karyawan</h3>
-
-    <a href="/karyawan/tambahKaryawan"> + Tambah karyawan Baru</a>
-
     <br />
     <br />
 @endsection
@@ -16,7 +13,7 @@
 
     <p>Cari Data karyawan :</p>
     <form action="/karyawan/cari" method="GET">
-        <input class="form-control" type="text" name="cari" placeholder="Cari karyawan berdasarkan merk .."
+        <input class="form-control eow" type="text" name="cari" placeholder="Cari karyawan berdasarkan Nama .."
             value="{{ old('cari') }}">
         <input type="submit" value="CARI" class="btn btn-primary">
     </form>
@@ -33,7 +30,7 @@
         <tr style="text-align: center">
             <td
             @if($errors->has('kodepegawai'))
-                alert('Kode Pegawai sudah ada. Silakan masukkan kode pegawai yang berbeda.');
+                alert('Kode Pegawai sudah ada.Pastikan kode yang dimasukan berbeda.');
                 return false;
             @endif
             >{{ $k->kodepegawai }}</td>
@@ -47,4 +44,8 @@
     @endforeach
 
     </table>
+    <br/>
+    <a class="btn btn-primary" href="/karyawan/tambahKaryawan"> + Tambah Data</a>
+    <br>
+    <br>
 @endsection
