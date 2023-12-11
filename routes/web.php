@@ -109,3 +109,8 @@ Route::get('/dbnilai','App\Http\Controllers\NilaiController@indexNilai');
 Route::get('/dbnilai/tambah','App\Http\Controllers\NilaiController@tambahData');
 Route::post('/dbnilai/storeData','App\Http\Controllers\NilaiController@storeData');
 
+Route::get('/karyawan','App\Http\Controllers\KaryawanController@indexKaryawan');
+Route::get('/karyawan/tambah','App\Http\Controllers\KaryawanController@tambahKaryawan');
+Route::post('/karyawan/storeData','App\Http\Controllers\KaryawanController@storeData');
+Route::post('/karyawan/update','App\Http\Controllers\KaryawanController@update');
+Route::get('/karyawan/hapus/{kode}','App\Http\Controllers\KaryawanController@hapus');
