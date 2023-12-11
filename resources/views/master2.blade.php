@@ -24,10 +24,10 @@
             <!-- Links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pegawai </a>
+                    <a class="nav-link" href="/karyawan">Karyawan </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Sepeda </a>
+                    <a class="nav-link" href="/sepeda"> Sepeda </a>
                 </li>
 
                 <!-- Dropdown -->
@@ -37,6 +37,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="/pegawai">Pegawai</a>
+                        <a class="dropdown-item" href="/dbnilai">Karyawan</a>
                         <a class="dropdown-item" href="/sepeda">Sepeda</a>
                         <a class="dropdown-item" href="/dbnilai">Nilai Mahasiswa</a>
                     </div>

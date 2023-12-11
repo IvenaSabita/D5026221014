@@ -3,8 +3,6 @@
 @section('judul_halaman')
 <h2>www.malasngoding.com</h2>
 <h3>Data Sepeda</h3>
-
-
 @endsection
 
 @section('konten')

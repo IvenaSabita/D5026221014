@@ -10,14 +10,15 @@
 @endsection
 
 @section('konten')
-
     <p>Cari Data karyawan :</p>
-    <form action="/karyawan/cari" method="GET">
-        <input class="form-control eow" type="text" name="cari" placeholder="Cari karyawan berdasarkan Nama .."
+    <form action="/karyawan/cari" method="GET" class="form-inline">
+        <form action="/sepeda/cari" method="GET" class="form-inline">
+            <input class="form-control" type="text" name="cari" placeholder="Cari Karyawan berdasarkan Kode .."
             value="{{ old('cari') }}">
-        <input type="submit" value="CARI" class="btn btn-primary">
+            <input type="submit" value="CARI" class="btn btn-primary ml-3">
+        </form>
     </form>
-
+    <br />
     <table class="table table-striped table-hover">
         <tr style="text-align: center;">
             <th>Kode Pegawai</th>
