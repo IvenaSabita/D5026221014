@@ -1,59 +1,66 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\DB;
 
 class KaryawanController extends Controller
 {
     public function index()
     {
-        // mengambil data dari table pegawai
-        // $pegawai = DB::table('karyawab')->get();
-        $pegawai = DB::table('karyawan')->paginate();
+    	// mengambil data dari table karyawan
+    	// $karyawan = DB::table('karyawan')->get();
 
-        // mengirim data pegawai ke view index
-        return view('index',['karyawan' => $karyawan]);
-    }
-    public function tambah(){
+        $karyawan = DB::table('karyawan')->get();
 
-        // memanggil view tambah
-        return view('tambahKaryawan');
+    	// mengirim data karyawan ke view index
+    	return view('indexKaryawan',['karyawan' => $karyawan]);
+
     }
 
-    public function store(Request $request){
-        DB::table('pegawai')->insert([
-            'kodepegawai' => $request->kode,
-            'namalengkap ' => $request->nama,
-            'divisi' => $request->divisi,
-            'departement' => $request->departement
+    // method untuk menampilkan view form tambah karyawan
+	public function tambah()
+	{
+
+		// memanggil view tambah
+		return view('tambahKaryawan');
+
+	}
+
+	// method untuk insert data ke table karyawan
+	public function store(Request $request)
+	{
+        $request->validate([
+            'kodepegawai' =>
+                'required',
+                'max:5',
+            'namalengkap' => 'required|max:50',
+            'divisi' => 'required|max:20',
+            'departemen' => 'required|max:20',
         ]);
-        return redirect('/karyawan');
-    }
 
+        // insert data ke table karyawan
+		DB::table('karyawan')->insert([
+			'kodepegawai' => $request->kodepegawai,
+			'namalengkap' => $request->namalengkap,
+			'divisi' => $request->divisi,
+			'departemen' => $request->departemen
+		]);
+		// alihkan halaman ke halaman karyawan
+		return redirect('/karyawan')->with('success', 'Karyawan berhasil ditambahkan');
 
-    public function update(Request $request){
-        // update data karyawan
+	}
 
-        DB::table('karyawan')->where('kodepegawai', $request->id) -> update([
-            'kodepegawai' => $request->kode,
-            'namalengkap ' => $request->nama,
-            'divisi' => $request->divisi,
-            'departement' => $request->departement
-        ]);
-        //alihkan halaman ke halaman pegawai
-        return redirect('/karyawan');
-    }
+	// method untuk hapus data karyawan
+	public function hapus($kodepegawai)
+	{
+		// menghapus data karyawan berdasarkan id yang dipilih
+		DB::table('karyawan')->where('kodepegawai',$kodepegawai)->delete();
 
-    public function hapus($id){
-        // menghapus data karyawan berdasarkan kode yang dipilih
-        DB::table('karyawan')
-            ->where('kodepegawai', $kode)
-            ->delete();
-        // alihkan ke halaman pegawai
-        return redirect('/karyawan');
-    }
+		// alihkan halaman ke halaman karyawan
+		return redirect('/karyawan');
+        //tdk return view karena redirect lebih singkat: melempar ke suatu url route karyawan, maka akan query all record
+	}
 
 }
